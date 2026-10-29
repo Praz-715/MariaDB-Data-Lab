@@ -1,0 +1,20 @@
+{
+  "name": "mariadb-data-lab",
+  "version": "0.1.0",
+  "description": "Realistic synthetic e-commerce data generator and MariaDB stress-testing lab (vanilla JS + Node.js).",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:integration": "node --test --test-concurrency=1 \"tests/integration/*.test.js\"",
+    "estimate": "node scripts/estimate.js"
+  },
+  "dependencies": {
+    "mariadb": "^3.5.4"
+  }
+}
